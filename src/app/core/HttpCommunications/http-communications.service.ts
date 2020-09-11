@@ -5,7 +5,7 @@ import {HttpClient, HttpEvent, HttpEventType, HttpParams, HttpRequest, HttpRespo
 @Injectable(
   
 )
-export class HttpComunicationsService {
+export class HttpCommunicationsService {
 
   private host = 'http://localhost:3000/';
 

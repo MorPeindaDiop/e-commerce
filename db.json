@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "mordiop99",
+      "name": "Mor",
+      "surname": "Diop",
+      "password": "123"
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "title": "Lezione 10/06/2020",
+      "description": "Lezione accademia Bergamo, corso Angular avanzato",
+      "steps": [
+        {
+          "id": 0,
+          "done": true,
+          "title": "Appello"
+        },
+        {
+          "id": 1,
+          "done": true,
+          "title": "Ripasso"
+        },
+        {
+          "id": 2,
+          "done": false,
+          "title": "Teoria"
+        },
+        {
+          "id": 3,
+          "done": false,
+          "title": "Pratica"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "ciao",
+      "description": "ciao",
+      "steps": []
+    }
+  ]
+}
