@@ -5,11 +5,11 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { switchMap, map, tap } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
 import { User } from 'src/app/core/model/user';
-import { loginUser, loginUserFailure, loginUserSuccess, initUser } from './login.action';
+import { loginUser, loginUserFailure, loginUserSuccess, initUser, signUpUser, signUpUserSuccess } from './login.action';
 
 @Injectable()
 export class LoginEffects{
-    constructor(private action$: Actions, private http: HttpCommunicationsService,private router: Router){}
+    constructor(private actions$: Actions, private http: HttpCommunicationsService,private router: Router){}
 
     retreiveAllUsers():Observable<User[]>{
         return this.http.retrieveGetCall<User[]>("users")
@@ -19,15 +19,15 @@ export class LoginEffects{
        return users.find(actualUser=>actualUser.username === username && actualUser.password === password);
     }
     
-    registerUser(username:string,password:string):Observable<User>{
-       return this.http.retrievePostCall<User>("users",{username,password})
+    registerUser(username: string, name: string, surname: string, password: string):Observable<User>{
+       return this.http.retrievePostCall<User>("users",{username, name, surname, password})
     }
     
     formatUser(user: User): User{
-        return {username: user.username, id: user.id, password: user.password} as User;
+        return {id: user.id, username: user.username, name: user.name, surname: user.surname, password: user.password} as User;
     }
       
-    loginUser$=createEffect(()=>this.action$.pipe(
+    loginUser$=createEffect(()=>this.actions$.pipe(
         ofType(loginUser),
         switchMap(action=>this.retreiveAllUsers().pipe(
           switchMap(users=>of(this.checkUserAccount(action.username,action.password,users)).pipe(
@@ -42,7 +42,7 @@ export class LoginEffects{
         ))
       ));
 
-      loginUserSuccess$=createEffect(()=>this.action$.pipe(
+      loginUserSuccess$=createEffect(()=>this.actions$.pipe(
         ofType(loginUserSuccess),
         tap(action=>{
           console.log('salvo utente in sessione da auth.effects');
@@ -52,24 +52,25 @@ export class LoginEffects{
         tap(()=>this.router.navigateByUrl('/home'))
       ));
       
-      /*signUpUser$=createEffect(()=>this.action$.pipe(
+      signUpUser$=createEffect(()=>this.actions$.pipe(
         ofType(signUpUser),
-        switchMap(action=>this.registerUser(action.username,action.password).pipe(
-          switchMap(user=>of(this.formatUser(user)).pipe(
-            map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
-          ))
+        switchMap(action=>this.registerUser(action.username, action.name, action.surname, action.password).pipe(
+        tap(user=> console.log(user)),
+        switchMap(user=>of(this.formatUser(user)).pipe(
+        map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
         ))
-      ));
-
-      signUpUserSuccess$=createEffect(()=>this.action$.pipe(
+        ))
+    ));
+        
+    signUpUserSuccess$=createEffect(()=>this.actions$.pipe(
         ofType(signUpUserSuccess),
-        tap((action)=>console.log('utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo',action)),
+        //tap((action)=>console.log('utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo',action)),
         map( (action) => initUser({ user:action.user })),
         tap((action)=>{
-          console.log('salvo in sessione l\'utente appena registrato');
-          sessionStorage.setItem("utente",JSON.stringify(action.user));
-          this.router.navigateByUrl('/home');
-        })
-      ));*/
+        //console.log('salvo in sessione l\'utente appena registrato');
+        sessionStorage.setItem("utente", JSON.stringify({username: action.user.username }))
+        this.router.navigateByUrl('/home');
+    })
+    ))
 
 }

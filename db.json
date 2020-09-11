@@ -6,6 +6,13 @@
       "name": "Mor",
       "surname": "Diop",
       "password": "123"
+    },
+    {
+      "username": "peinda",
+      "name": "diop",
+      "surname": "mordiop@gmail.com",
+      "password": "diop",
+      "id": 1
     }
   ],
   "products": [

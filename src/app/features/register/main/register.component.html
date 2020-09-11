@@ -1,0 +1,19 @@
+[12:44, 11/9/2020] Andrea Lo Nivuro: <div class='bold-line'></div>
+<div class='container'>
+    <div class='window'>
+        <div class='overlay'></div>
+        <div class='content'>
+            <div class='welcome'>Registrati!</div>
+            <!--<div class='subtitle'>Per non perdere nessuna offerta del nostro sito</div>-->
+            <div class='input-fields'>
+                <input type='text' placeholder='Username' class='input-line full-width' #username>
+                <input type='text' placeholder='Name' class='input-line full-width' #name>
+                <input type='text' placeholder='Surname' class='input-line full-width' #surname>
+                <input type='password' placeholder='Password' class='input-line full-width' #psw>
+            </div>
+            <div><button class='ghost-round-2 full-width-2' (click)="signup(username.value, name.value, surname.value, psw.value)">Registrati</button></div>
+            <div class='spacing'>hai già un <span class='highlight' routerLink="/login">Account</span>?</div>
+            <div><button class='ghost-round full-width' routerLink="/login">Effettua il Login</button></div>
+        </div>
+    </div>
+</div>
