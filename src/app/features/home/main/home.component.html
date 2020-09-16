@@ -1,1 +1,31 @@
-<p>home works!</p>
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="/assets/img/retro4.jpg" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Nike Jordan</h3>
+        <p>J's</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="/assets/img/yeezy.jpg" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Adidas</h3>
+        <p>Adidas</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="/assets/img/lebron.jpg" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Lebron</h3>
+        <p>Lbj</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <br>
+<button id="prenota">PRENOTA ORA</button>

@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "id": 0,
       "username": "mordiop99",
       "name": "Mor",
       "surname": "Diop",
-      "password": "123"
+      "password": "123",
+      "id": 0
     },
     {
       "username": "peinda",
@@ -13,6 +13,20 @@
       "surname": "mordiop@gmail.com",
       "password": "diop",
       "id": 1
+    },
+    {
+      "username": "md99",
+      "name": "andrea",
+      "surname": "lonivuro",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "ad2",
+      "name": "as",
+      "surname": "asd",
+      "password": "sadas",
+      "id": 3
     }
   ],
   "products": [

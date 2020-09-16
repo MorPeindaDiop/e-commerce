@@ -10,10 +10,12 @@ import { usersReducer } from './redux/users/login.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './redux/users/login.effects';
 import { environment } from 'src/environments/environment';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
