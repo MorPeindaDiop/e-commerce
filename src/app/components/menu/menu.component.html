@@ -1,8 +1,9 @@
 <div *ngIf="currentRoute!='/login' && currentRoute!='/register'" class="wrapper">
 
     <ng-container>
+        <h1 class="four"  [routerLink]="'/home'">Welcome to Sneakers.com</h1>
         <div [routerLink]="'/home'" class="one" *ngIf="currentRoute!='/home'">Home</div>
-        <div>Sneakers</div>
+        
         <div [routerLink]="'/cart'" routerLinkActive="active" class="seven">Carrello</div>
         <div (click)="logout()" class="eight">Esci</div>
     </ng-container>

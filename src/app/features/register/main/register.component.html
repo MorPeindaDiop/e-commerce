@@ -1,55 +1,8 @@
-<!--<div class='bold-line'></div>
-<div class='container'>
-    <div class='window'>
-        <div class='overlay'></div>
-        <div class='content'>
-            <div class='welcome'>Registrati!</div>
-           
-            <div class='input-fields'>
-                <input type='text' placeholder='Username' class='input-line full-width' #username>
-                <input type='text' placeholder='Name' class='input-line full-width' #name>
-                <input type='text' placeholder='Surname' class='input-line full-width' #surname>
-                <input type='password' placeholder='Password' class='input-line full-width' #psw>
-            </div>
-            <div><button class='ghost-round-2 full-width-2' (click)="signup(username.value, name.value, surname.value, psw.value)">Registrati</button></div>
-            <div class='spacing'>hai già un <span class='highlight' routerLink="/login">Account</span>?</div>
-            <div><button class='ghost-round full-width' routerLink="/login">Effettua il Login</button></div>
-        </div>
-    </div>
-</div>-->
-
-
-<!--<form [formGroup]="loginForm" (ngSubmit)="doLogin()">
-    <label for="fname">Username</label><br>
-    <input formControlName="username"><br>
-    <label for="lname">Password</label><br>
-    <input formControlName="password"><br>
-    <button type="submit">Login</button>
-    <button routerLink="/register">Crea un account</button>
-</form>-->
-
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in"  routerLink="/login"><label for="tab-1" class="tab">Sign In</label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab">Sign Up</label>
 		<div class="login-form">
-			<!--<div class="sign-in-htm">
-                <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
-				<div class="group">
-					<label for="fname" class="label">Username</label>
-					<input formControlName="username" type="text" class="input">
-				</div>
-				<div class="group">
-					<label for="lname" class="label">Password</label>
-					<input formControlName="password" type="password" class="input" data-type="password">
-				</div>
-				
-				<div class="group">
-					<input type="submit" class="button" value="Sign In">
-                </div>
-            </form>
-				
-            </div>-->
             
             <div class='bold-line'></div>
 
@@ -75,7 +28,6 @@
 				<div class="group">
 					<input type="submit" class="button" value="Sign Up" (click)="signup(username.value, name.value, surname.value, psw.value)">
 				</div>
-				<div class="hr"></div>
 				<div class="foot-lnk">
 					<label for="tab-1">Already Member?</label>
 				</div>

@@ -27,6 +27,13 @@
       "surname": "asd",
       "password": "sadas",
       "id": 3
+    },
+    {
+      "username": "mordiop99",
+      "name": "",
+      "surname": "",
+      "password": "123",
+      "id": 4
     }
   ],
   "products": [

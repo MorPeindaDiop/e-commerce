@@ -48,11 +48,14 @@ img {
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    background: linear-gradient( to right,#addefa 1%, #cab9fe 40%);
+    background: linear-gradient( to left,#cab9fe 5%,  #addefa 50%);
     }
 
 .one {
     grid-column: 1;
     grid-row: 1;
+    margin-top: 5%;
     }
 
 .two {
@@ -60,21 +63,12 @@ img {
     grid-row: 1;
     }
 
-.three {
-    grid-column: 3;
-    grid-row: 1;
-    }
-
 .four {
-    grid-column: 4;
+    grid-column: 3/ span 4;
     grid-row: 1;
+    margin-top: 3%;
+    outline: none;
     }
-
-.five {
-    grid-column: 5;
-    grid-row: 1;
-    }
-
 .six {
     grid-column: 6;
     grid-row: 1;
@@ -83,19 +77,25 @@ img {
 .seven {
     grid-column: 7;
     grid-row: 1;
+    margin-top: 3%;
     }
 
 .eight {
     grid-column: 8;
     grid-row: 1;
+    margin-top: 5%;
     }
-
+h1{
+    color: white;
+    text-align: center;
+}
 .wrapper div {
-    color: #000000;
+    color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 17px;
-    padding-top: 50px;
+    font-size: 25px;
+    padding-top: 13%;
+
     }
 
 .wrapper div:hover {
@@ -107,14 +107,4 @@ img {
 .wrapper div.active {
     border-bottom: solid white 1px;
     outline: none;
-    }
-
-
-
-
-
-
-
-
-
-    
+    } 
