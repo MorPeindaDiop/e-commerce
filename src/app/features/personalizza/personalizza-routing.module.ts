@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PersonalizzaComponent } from './personalizza.component';
+import { PersonalizzaComponent } from './main/personalizza.component';
 
 const routes: Routes = [{ path: '', component: PersonalizzaComponent }];
 

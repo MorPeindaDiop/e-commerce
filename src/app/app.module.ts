@@ -11,6 +11,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './redux/users/login.effects';
 import { environment } from 'src/environments/environment';
 import { MenuComponent } from './components/menu/menu.component';
+import { reducers } from './redux';
+import { SneakersEffects } from './redux/sneakers/sneakers.effects';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { MenuComponent } from './components/menu/menu.component';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    StoreModule.forRoot({ usersState: usersReducer }),
-    EffectsModule.forRoot([LoginEffects]),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([LoginEffects, SneakersEffects]),
+    
     /*StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

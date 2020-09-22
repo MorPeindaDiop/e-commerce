@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { retrieveAllProducts } from './redux/sneakers/sneakers.action';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +12,13 @@ export class AppComponent {
   title = 'e-commerce';
   currentRoute: string = null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private store: Store) { }
 
   ngOnInit(): void {
     this.router.events.subscribe(value => {
       this.currentRoute = this.router.url.toString();
     });
+    this.store.dispatch(retrieveAllProducts());
   }
 
   isLog(): boolean {

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Sneakers } from 'src/app/core/model/sneakers';
+import { selectSneakers, selectSneakersByBrand } from 'src/app/redux/sneakers';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +13,19 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig, private store:Store) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
     config.wrap = false;
     config.keyboard = false;
     config.pauseOnHover = false;
+
   }
 
   ngOnInit(): void {
+    console.log(this.sneakers);
   }
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  get sneakers(): Observable<Sneakers[]> {    return this.store.pipe(select(selectSneakers));  }
    
 }

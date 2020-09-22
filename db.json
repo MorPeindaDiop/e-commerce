@@ -13,62 +13,71 @@
       "surname": "mordiop@gmail.com",
       "password": "diop",
       "id": 1
-    },
-    {
-      "username": "md99",
-      "name": "andrea",
-      "surname": "lonivuro",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "username": "ad2",
-      "name": "as",
-      "surname": "asd",
-      "password": "sadas",
-      "id": 3
-    },
-    {
-      "username": "mordiop99",
-      "name": "",
-      "surname": "",
-      "password": "123",
-      "id": 4
     }
   ],
-  "products": [
+  "sneakers": [
     {
       "id": 0,
-      "title": "Lezione 10/06/2020",
-      "description": "Lezione accademia Bergamo, corso Angular avanzato",
-      "steps": [
-        {
-          "id": 0,
-          "done": true,
-          "title": "Appello"
-        },
-        {
-          "id": 1,
-          "done": true,
-          "title": "Ripasso"
-        },
-        {
-          "id": 2,
-          "done": false,
-          "title": "Teoria"
-        },
-        {
-          "id": 3,
-          "done": false,
-          "title": "Pratica"
-        }
-      ]
+      "brand":"Jordan",
+      "price": 180,
+      "color":"White",
+      "img":"assets/img/Jordan/retro4.jpg"
     },
     {
       "id": 1,
-      "title": "ciao",
-      "description": "ciao",
-      "steps": []
+      "brand":"Jordan",
+      "price": 225,
+      "color":"Black",
+      "img":"assets/img/Jordan/retro4Black.jpg"
+    },
+    {
+      "id": 2,
+      "brand":"Jordan",
+      "price": 225,
+      "color":"Gray",
+      "img":"assets/img/Jordan/retro4Gray.jpg"
+    },
+    {
+      "id": 3,
+      "brand":"Lebron",
+      "price": 225,
+      "color":"Black",
+      "img":"assets/img/Lebron/lebron.jpg"
+    },
+    {
+      "id": 4,
+      "brand":"Lebron",
+      "price": 199,
+      "color":"White",
+      "img":"assets/img/Lebron/lebronWhite.jpg"
+    },
+    {
+      "id": 5,
+      "brand":"Lebron",
+      "price": 199,
+      "color":"Yellow",
+      "img":"assets/img/Lebron/lebronYellow.jpg"
+    },
+    {
+      "id": 6,
+      "brand":"Yeezy",
+      "price": 330,
+      "color":"White",
+      "img":"assets/img/Yeezy/yeezy.jpg"
+    },
+    {
+      "id": 7,
+      "brand":"Yeezy",
+      "price": 330,
+      "color":"Gray",
+      "img":"assets/img/Yeezy/yeezyGray.jpg"
+    },
+    {
+      "id": 8,
+      "brand":"Yeezy",
+      "price": 330,
+      "color":"Yellow",
+      "img":"assets/img/Yeezy/yeezyYellow.jpg"
     }
   ]
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'register', loadChildren: () => import('./features/register/register.module').then(m => m.RegisterModule) },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'cart', loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule) },
-  { path: 'personalizza', loadChildren: () => import('./features/personalizza/personalizza.module').then(m => m.PersonalizzaModule) },
+  { path: 'personalizza/:id', loadChildren: () => import('./features/personalizza/personalizza.module').then(m => m.PersonalizzaModule) },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,37 +1,21 @@
 <div class="prova">
 
 
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let item of sneakers|async">
     
       <div class="picsum-img-wrapper">
-        <img src="/assets/img/retro4.jpg" alt="Random second slide">
+        <img [src]="item.img" alt="Random second slide">
       </div>
     
       <div class="carousel-caption">
-        <h3>Nike Jordan</h3>
-        <p>Retro 5</p>
+        <h3>{{item.brand}}</h3>
+        <br>
+        
       </div>
-    
+      <div class="bott">
+      <button id="prenota" [routerLink]="['/personalizza', item.id]" routerLinkActive="active">PERSONALIZZA ORA</button>
+    </div>
     </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="/assets/img/yeezy.jpg" alt="Random second slide">
-      </div>
-      <div class="carousel-caption">
-        <h3>Adidas</h3>
-        <p>yeezy</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="/assets/img/lebron.jpg" alt="Random second slide">
-      </div>
-      <div class="carousel-caption">
-        <h3>Lebron</h3>
-        <p>Lebron6</p>
-      </div>
-    </ng-template>
+
   </ngb-carousel>
-  <br>
-<button id="prenota">PERSONALIZZA ORA</button>
