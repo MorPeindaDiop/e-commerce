@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Sneakers } from 'src/app/core/model/sneakers';
-import { getCurrentNavigatedSneakers } from 'src/app/redux/sneakers';
+import { getCurrentNavigatedSneakers, selectSneakersByBrand } from 'src/app/redux/sneakers';
+import { sneakersReducer } from 'src/app/redux/sneakers/sneakers.reducers';
 
 
 @Component({
@@ -16,11 +17,12 @@ export class PersonalizzaComponent implements OnInit {
 
   customForm: FormGroup;
   currentsneakers: Sneakers;
-  img: string = "";
+  img: string="";
   currentUserId: number;
   
   get sneakers(): Observable<Sneakers> {
-    return this.store.pipe(select(getCurrentNavigatedSneakers));
+    return this.store.pipe(select(selectSneakersByBrand));
+    
   }
 
   // get user(): Observable<User> {
@@ -33,10 +35,14 @@ export class PersonalizzaComponent implements OnInit {
       testo: [''],
       coloretesto: [''],
     });
-    
+    this.sneakers.subscribe(currentImg=>{
+      this.img=currentImg.img
+    });
+    console.log(this.sneakers);
   }
   
   ngOnInit(): void {
+   
     // //this.store.dispatch(retrieveAllProducts())
     // console.log(this.product);
     // this.product.subscribe(productSelected => {
@@ -50,7 +56,10 @@ export class PersonalizzaComponent implements OnInit {
     //   this.currentUserId = user.id;
     // })
   }
+
+
   
+
   // ripristina() {
   //   this.personalizzaForm.reset()
   // }
@@ -65,5 +74,6 @@ export class PersonalizzaComponent implements OnInit {
   //   this.personalizzaService.addToCart(cartProduct);
   //   this.router.navigateByUrl('/cart/'+this.currentUserId);
   // }
+  
 
 }

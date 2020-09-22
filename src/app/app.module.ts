@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 import { MenuComponent } from './components/menu/menu.component';
 import { reducers } from './redux';
 import { SneakersEffects } from './redux/sneakers/sneakers.effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SneakersEffects } from './redux/sneakers/sneakers.effects';
     AppRoutingModule,
     CoreModule,
     SharedModule,
+    StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([LoginEffects, SneakersEffects]),
     

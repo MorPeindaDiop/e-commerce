@@ -3,7 +3,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Sneakers } from 'src/app/core/model/sneakers';
-import { selectSneakers, selectSneakersByBrand } from 'src/app/redux/sneakers';
+import { selectSneakers } from 'src/app/redux/sneakers';
 
 @Component({
   selector: 'app-home',

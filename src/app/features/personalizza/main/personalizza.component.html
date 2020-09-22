@@ -1,8 +1,10 @@
 
-   
+   <!-- <div class="prova"  >
+    {{sneakers|async|json}} 
+</div> -->
  <div class="wrapper">
      <div class="one">
-<img src="/assets/img/Jordan/retro4black.jpg" alt="">
+<img [src]="img" alt="">
 <br><br>
 <div class="ripristina">
 <input type="button" value="RIPRISTINA" >
@@ -16,9 +18,8 @@
 
  <div class="due">
      <p>Colore sneakers:</p>
-    <a href=""><span class="gray"></span></a>&nbsp;
-    <a href=""><span class="white"></span></a>&nbsp;
-    <a href=""><span class="black"></span></a>
+    <a href=""><span *ngFor="let item of sneakers|async" [class]="item.color"></span></a>&nbsp;
+    
  </div>
 <div class="tre">
     <p>Testo personalizzato:</p>

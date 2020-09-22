@@ -1,6 +1,6 @@
   
 import { Params } from '@angular/router';
-import { createSelector } from '@ngrx/store';
+import { createSelector, props } from '@ngrx/store';
 import { distinct } from 'rxjs/operators';
 import { Sneakers } from 'src/app/core/model/sneakers';
 
@@ -20,8 +20,9 @@ export const selectSneakers = createSelector(
 
 export const selectSneakersByBrand = createSelector(
     selectSneakersState,
-    (state: SneakersState) => {
-        // return state.sneakers.distinct((sneakers:Sneakers) => sneakers.brand);
+    selectRouteParams,
+    (state: SneakersState, params: Params)=> {
+        return state.sneakers.find(sneakers => sneakers.brand === (params['brand']));
     }
 );
 
