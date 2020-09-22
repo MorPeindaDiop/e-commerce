@@ -7,7 +7,8 @@ export interface SneakersState {
 }
 
 export const initialState: SneakersState = {
-    sneakers: []
+
+    sneakers: JSON.parse(sessionStorage.getItem("sneakers"))
 };
 
 export const sneakersReducer = createReducer(

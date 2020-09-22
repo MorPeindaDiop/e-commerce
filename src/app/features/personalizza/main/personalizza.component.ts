@@ -18,6 +18,7 @@ export class PersonalizzaComponent implements OnInit {
   customForm: FormGroup;
   currentsneakers: Sneakers;
   img: string="";
+  brand: string="";
   currentUserId: number;
   
   get sneakers(): Observable<Sneakers> {
@@ -38,6 +39,10 @@ export class PersonalizzaComponent implements OnInit {
     this.sneakers.subscribe(currentImg=>{
       this.img=currentImg.img
     });
+    this.sneakers.subscribe(currentBrand=>{
+      this.brand=currentBrand.brand
+    });
+
     console.log(this.sneakers);
   }
   
