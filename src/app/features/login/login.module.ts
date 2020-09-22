@@ -6,9 +6,6 @@ import { LoginComponent } from './main/login.component';
 import { LoginService } from './services/login.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-
-
-
 @NgModule({
   declarations: [LoginComponent],
   providers: [LoginService],

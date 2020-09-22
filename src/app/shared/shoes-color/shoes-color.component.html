@@ -1,0 +1,7 @@
+<span
+    class="dot"
+    *ngFor="let color of colors"
+    [style.backgroundColor]="color"
+    (click)="selectColor(color)"
+    [ngClass]="{'selected': color === value, 'no-selected': color != value}"
+    ></span>

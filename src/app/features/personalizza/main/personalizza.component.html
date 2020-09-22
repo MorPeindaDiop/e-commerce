@@ -1,32 +1,32 @@
+<div class="prova">
+</div>
 
-   <!-- <div class="prova"  >
-    {{sneakers|async|json}} 
-</div> -->
- <div class="wrapper">
-     <div class="one">
-<img [src]="img" alt="">
-<br><br>
-<div class="ripristina">
+<form>
+    <div class="wrapper">
+        <div class="one">
+            <img [src]="img" alt="">
+            <br><br>
+            <!-- <div class="ripristina">
 <input type="button" value="RIPRISTINA" >
-</div>
-</div>
+</div> -->
+        </div>
 
-<div class="two">
-    <div class="uno">
-        <h1>Jordan retro 4</h1>
+        <div class="two">
+            <div class="uno">
+                <h3>CUSTOMIZE YOUR SNEAKER</h3>
+            </div>
+
+            <div class="due">
+                <p>Color:</p>
+                <app-shoes-color ></app-shoes-color>
+            </div>
+            <div class="tre">
+                <p>Custom text:</p>
+                <input type="text" placeholder="Enter your text">
+            </div>
+            <div class="quattro">
+                <input type="submit" value="AGGIUNGI AL CARRELLO" >
+            </div>
+        </div>
     </div>
-
- <div class="due">
-     <p>Colore sneakers:</p>
-    <a href=""><span *ngFor="let item of sneakers|async" [class]="item.color"></span></a>&nbsp;
-    
- </div>
-<div class="tre">
-    <p>Testo personalizzato:</p>
-    <input type="text" placeholder="Inserisci il testo">
-</div>
-<div class="quattro">
-    <input type="button" value="AGGIUNGI AL CARRELLO">
-</div>
-</div>
-</div>
+</form>

@@ -20,14 +20,14 @@
       "id": 0,
       "brand":"Jordan",
       "price": 180,
-      "color":"White",
+      "color":"white",
       "img":"assets/img/Jordan/retro4.jpg"
     },
     {
       "id": 1,
       "brand":"Jordan",
       "price": 225,
-      "color":"Black",
+      "color":"black",
       "img":"assets/img/Jordan/retro4Black.jpg"
     },
     {
@@ -41,43 +41,44 @@
       "id": 3,
       "brand":"Lebron",
       "price": 225,
-      "color":"Black",
+      "color":"black",
       "img":"assets/img/Lebron/lebron.jpg"
     },
     {
       "id": 4,
       "brand":"Lebron",
       "price": 199,
-      "color":"White",
+      "color":"white",
       "img":"assets/img/Lebron/lebronWhite.jpg"
     },
     {
       "id": 5,
       "brand":"Lebron",
       "price": 199,
-      "color":"Yellow",
-      "img":"assets/img/Lebron/lebronYellow.jpg"
+      "color":"yellow",
+      "img":"assets/img/Lebron/lebronGray.jpg"
     },
     {
       "id": 6,
       "brand":"Yeezy",
       "price": 330,
-      "color":"White",
+      "color":"white",
       "img":"assets/img/Yeezy/yeezy.jpg"
     },
     {
       "id": 7,
       "brand":"Yeezy",
       "price": 330,
-      "color":"Gray",
+      "color":"gray",
       "img":"assets/img/Yeezy/yeezyGray.jpg"
     },
     {
       "id": 8,
       "brand":"Yeezy",
       "price": 330,
-      "color":"Yellow",
-      "img":"assets/img/Yeezy/yeezyYellow.jpg"
+      "color":"yellow",
+      "img":"assets/img/Yeezy/yeezyBlack.jpg"
     }
   ]
+
 }

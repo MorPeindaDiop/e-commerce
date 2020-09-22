@@ -8,10 +8,8 @@
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-        background: rgb(122, 210, 248);
-        background: linear-gradient(90deg, rgba(122, 210, 248, 1) 24%, rgba(194, 129, 254, 1) 84%);
-        height: 190px;
-    
+    background: linear-gradient( to right,#addefa 1%, #cab9fe 40%);
+    background: linear-gradient( to left,#cab9fe 5%,  #addefa 50%);
     }
     .prova{
         height: 15%;
