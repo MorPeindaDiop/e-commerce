@@ -1,0 +1,805 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-commerce documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">e-commerce documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>LoginEffects</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/redux/users/login.effects.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loginUser$">loginUser$</a>
+                            </li>
+                            <li>
+                                <a href="#loginUserSuccess$">loginUserSuccess$</a>
+                            </li>
+                            <li>
+                                <a href="#signUpUser$">signUpUser$</a>
+                            </li>
+                            <li>
+                                <a href="#signUpUserSuccess$">signUpUserSuccess$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkUserAccount">checkUserAccount</a>
+                            </li>
+                            <li>
+                                <a href="#formatUser">formatUser</a>
+                            </li>
+                            <li>
+                                <a href="#registerUser">registerUser</a>
+                            </li>
+                            <li>
+                                <a href="#retreiveAllUsers">retreiveAllUsers</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(actions$: Actions, http: <a href="../injectables/HttpCommunicationsService.html">HttpCommunicationsService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/redux/users/login.effects.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>actions$</td>
+                                                  
+                                                        <td>
+                                                                    <code>Actions</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpCommunicationsService.html" target="_self" >HttpCommunicationsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkUserAccount"></a>
+                    <span class="name">
+                        <b>
+                            checkUserAccount
+                        </b>
+                        <a href="#checkUserAccount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkUserAccount(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, users)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/redux/users/login.effects.ts:18</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>users</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatUser"></a>
+                    <span class="name">
+                        <b>
+                            formatUser
+                        </b>
+                        <a href="#formatUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatUser(user: <a href="../interfaces/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/redux/users/login.effects.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerUser"></a>
+                    <span class="name">
+                        <b>
+                            registerUser
+                        </b>
+                        <a href="#registerUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerUser(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, surname: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/redux/users/login.effects.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>surname</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Observable&lt;User&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="retreiveAllUsers"></a>
+                    <span class="name">
+                        <b>
+                            retreiveAllUsers
+                        </b>
+                        <a href="#retreiveAllUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>retreiveAllUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/redux/users/login.effects.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Observable&lt;User[]&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginUser$"></a>
+                        <span class="name">
+                            <b>
+                            loginUser$</b>
+                            <a href="#loginUser$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(loginUser),
+        switchMap(action&#x3D;&gt;this.retreiveAllUsers().pipe(
+          switchMap(users&#x3D;&gt;of(this.checkUserAccount(action.username,action.password,users)).pipe(
+            map( user&#x3D;&gt;{
+              if(typeof user &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;){
+                return loginUserFailure({error:&#x27;username e/o password non corretta&#x27;})
+              }else{
+                return loginUserSuccess({user});
+              }
+            })
+          ))
+        ))
+      ))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/redux/users/login.effects.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginUserSuccess$"></a>
+                        <span class="name">
+                            <b>
+                            loginUserSuccess$</b>
+                            <a href="#loginUserSuccess$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(loginUserSuccess),
+        tap(action&#x3D;&gt;{
+          console.log(&#x27;salvo utente in sessione da auth.effects&#x27;);
+          sessionStorage.setItem(&quot;utente&quot;, JSON.stringify({username:action.user.username,id:action.user.id}))
+        }),
+        map( (action) &#x3D;&gt; initUser({ user: action.user })),
+        tap(()&#x3D;&gt;this.router.navigateByUrl(&#x27;/home&#x27;))
+      ))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/redux/users/login.effects.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="signUpUser$"></a>
+                        <span class="name">
+                            <b>
+                            signUpUser$</b>
+                            <a href="#signUpUser$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(signUpUser),
+        switchMap(action&#x3D;&gt;this.registerUser(action.username, action.name, action.surname, action.password).pipe(
+        tap(user&#x3D;&gt; console.log(user)),
+        switchMap(user&#x3D;&gt;of(this.formatUser(user)).pipe(
+        map( (formattedUser) &#x3D;&gt; signUpUserSuccess({ user: formattedUser }))
+        ))
+        ))
+    ))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/redux/users/login.effects.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="signUpUserSuccess$"></a>
+                        <span class="name">
+                            <b>
+                            signUpUserSuccess$</b>
+                            <a href="#signUpUserSuccess$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(signUpUserSuccess),
+        //tap((action)&#x3D;&gt;console.log(&#x27;utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo&#x27;,action)),
+        map( (action) &#x3D;&gt; initUser({ user:action.user })),
+        tap((action)&#x3D;&gt;{
+        //console.log(&#x27;salvo in sessione l\&#x27;utente appena registrato&#x27;);
+        sessionStorage.setItem(&quot;utente&quot;, JSON.stringify({username: action.user.username }))
+        this.router.navigateByUrl(&#x27;/home&#x27;);
+    })
+    ))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/redux/users/login.effects.ts:65</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { HttpCommunicationsService } from &#x27;src/app/core/HttpCommunications/http-communications.service&#x27;;
+import { Actions, createEffect, ofType } from &#x27;@ngrx/effects&#x27;;
+import { switchMap, map, tap } from &#x27;rxjs/operators&#x27;;
+import { of, Observable } from &#x27;rxjs&#x27;;
+import { User } from &#x27;src/app/core/model/user&#x27;;
+import { loginUser, loginUserFailure, loginUserSuccess, initUser, signUpUser, signUpUserSuccess } from &#x27;./login.action&#x27;;
+
+@Injectable()
+export class LoginEffects{
+    constructor(private actions$: Actions, private http: HttpCommunicationsService,private router: Router){}
+
+    retreiveAllUsers():Observable&lt;User[]&gt;{
+        return this.http.retrieveGetCall&lt;User[]&gt;(&quot;users&quot;)
+    }
+    
+    checkUserAccount(username:string,password:string,users){
+       return users.find(actualUser&#x3D;&gt;actualUser.username &#x3D;&#x3D;&#x3D; username &amp;&amp; actualUser.password &#x3D;&#x3D;&#x3D; password);
+    }
+    
+    registerUser(username: string, name: string, surname: string, password: string):Observable&lt;User&gt;{
+       return this.http.retrievePostCall&lt;User&gt;(&quot;users&quot;,{username, name, surname, password})
+    }
+    
+    formatUser(user: User): User{
+        return {id: user.id, username: user.username, name: user.name, surname: user.surname, password: user.password} as User;
+    }
+      
+    loginUser$&#x3D;createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(loginUser),
+        switchMap(action&#x3D;&gt;this.retreiveAllUsers().pipe(
+          switchMap(users&#x3D;&gt;of(this.checkUserAccount(action.username,action.password,users)).pipe(
+            map( user&#x3D;&gt;{
+              if(typeof user &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;){
+                return loginUserFailure({error:&#x27;username e/o password non corretta&#x27;})
+              }else{
+                return loginUserSuccess({user});
+              }
+            })
+          ))
+        ))
+      ));
+
+      loginUserSuccess$&#x3D;createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(loginUserSuccess),
+        tap(action&#x3D;&gt;{
+          console.log(&#x27;salvo utente in sessione da auth.effects&#x27;);
+          sessionStorage.setItem(&quot;utente&quot;, JSON.stringify({username:action.user.username,id:action.user.id}))
+        }),
+        map( (action) &#x3D;&gt; initUser({ user: action.user })),
+        tap(()&#x3D;&gt;this.router.navigateByUrl(&#x27;/home&#x27;))
+      ));
+      
+      signUpUser$&#x3D;createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(signUpUser),
+        switchMap(action&#x3D;&gt;this.registerUser(action.username, action.name, action.surname, action.password).pipe(
+        tap(user&#x3D;&gt; console.log(user)),
+        switchMap(user&#x3D;&gt;of(this.formatUser(user)).pipe(
+        map( (formattedUser) &#x3D;&gt; signUpUserSuccess({ user: formattedUser }))
+        ))
+        ))
+    ));
+        
+    signUpUserSuccess$&#x3D;createEffect(()&#x3D;&gt;this.actions$.pipe(
+        ofType(signUpUserSuccess),
+        //tap((action)&#x3D;&gt;console.log(&#x27;utente,registrato adesso devo registrarlo nella sessione e reindirizzarlo&#x27;,action)),
+        map( (action) &#x3D;&gt; initUser({ user:action.user })),
+        tap((action)&#x3D;&gt;{
+        //console.log(&#x27;salvo in sessione l\&#x27;utente appena registrato&#x27;);
+        sessionStorage.setItem(&quot;utente&quot;, JSON.stringify({username: action.user.username }))
+        this.router.navigateByUrl(&#x27;/home&#x27;);
+    })
+    ))
+
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginEffects.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
