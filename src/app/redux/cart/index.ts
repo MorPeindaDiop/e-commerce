@@ -34,5 +34,5 @@ export const getTotaleCarrello = createSelector(
 export const getCurrentNavigatedCart = createSelector(
     selectCartState,
     selectRouteParams,
-    (state: CartState, params: Params) => state.cart.filter(item => item.userId === Number(params['id']))
+    (state: CartState, params: Params) => state.cart.filter(item => item.id === Number(params['id']))
 );
